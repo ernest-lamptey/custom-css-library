@@ -7,6 +7,7 @@ $grid-gaps: (
     "2": 20px,
     "3": 30px,
 );
+$layout-values: flex-start, flex-end, center, space-between, space-around;
 
 
 // Base layout classes
@@ -31,6 +32,13 @@ $grid-gaps: (
     .gap-#{$key} {
         margin-left: -$val;
         margin-right: -$val;
+    }
+}
+
+// Justify content classes
+@each $val in $layout-values {
+    .justify-#{$val} {
+        justify-content: $val;
     }
 }
 
